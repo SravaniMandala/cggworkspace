@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    <h1>Object operation</h1>
+    <script>
+        const ob={
+            name:'abc',
+            age:30,
+            address:'cgg',
+            phn : 7379920174
+        }
+        console.log(ob)
+        console.log(typeof ob)
+
+        const ob1={
+            name:'abc',
+            age:30,
+            address:'cgg',
+            phone:987654323,
+            'last Name':'xyz'
+        }
+        console.log(ob1)
+        const ob2={
+            name:'abc',
+            age:30,
+            address:'cgg',
+            phone:987654323,
+            'last Name':'xyz',
+            display:function(){
+                console.log('display properties...')
+                console.log(this.name)
+                console.log(this.age)
+                console.log(this.address)
+            }
+        }
+
+        ob2.display()
+        ob2['display']()
+
+        for(let key in ob2){
+            console.log(`${key}  ${ob2[key]}`)
+        }
+
+        console.log(ob2.name)
+        ob2.name='aaa'
+        ob2['last Name']='zzz'
+        console.log(ob2.name);
+        console.log(ob2);
+
+        //dynamically addding properties
+
+        ob2['email']='abc@gmail.com'
+
+        //deleting properties
+        delete ob2['last Name']
+        console.log(ob2)
+    </script>
+</body>
+</html>

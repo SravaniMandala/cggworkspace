@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <h2>For in loop</h2>
+    <script>
+        console.log('for in example')
+        let str1={
+            name:'abc',
+            phone:1234,
+            address:'hyd'
+        }
+        console.log(typeof str1);
+        console.log(str1)
+
+        for(let k in str1){
+            console.log(k);
+        }
+
+        for(let k in str1){
+            console.log(`${k} => ${str1[k]}`);
+        }
+
+        let ar=['abc','pqr','lmn']
+        for(var i in ar){
+            console.log(ar[i]);
+        }
+
+        console.log(ar);
+        for(let item of ar){
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

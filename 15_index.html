@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Set Attributes</title>
+</head>
+<body>
+    <h1>Get and Set Attributes</h1>
+
+    <a id="url" class="alert alert-danger" href="http://ww.google.com">Google</a>
+    <button onclick="getAtt()">Get</button>
+    <button onclick="setAtt()">Set</button>
+    <script>
+        const getAtt=()=>{
+            let urlob=document.getElementById('url')
+            let h=urlob.getAttribute('href')
+            console.log(h);
+            console.log(urlob.getAttribute('id'));
+            console.log(urlob.getAttribute('class'))
+        }
+
+        const setAtt=()=>{
+            let urlob=document.getElementById('url')
+            urlob.innerHTML='Yahoo'
+            urlob.setAttribute('href',"http://ww.yahoo.com")
+        }
+
+        const removeAt=()=>{
+            let urlob=document.getElementById('url')
+            urlob.removeAttribute('class')
+        }
+    </script>
+</body>
+</html>

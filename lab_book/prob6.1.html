@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <table border="5" cellspacing="2" cellpadding="10" bordercolor="blue">
+        <tr>
+            <td colspan="2"><h1>Location object properties</h1></td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td id="row1"></td>
+        </tr>
+        <tr>
+            <td>pathname</td>
+            <td id="row2"></td>
+        </tr>
+        <tr>
+            <td>protocol</td>
+            <td id="row3"></td>
+        </tr>
+    </table>
+    <script>
+        window.onload=function(){
+            
+            var href = location.href;
+            var protocol = location.protocol;
+            var pathname = location.pathname;
+
+            document.getElementById('row1').innerHTML=href;
+            document.getElementById('row2').innerHTML=protocol;
+            document.getElementById('row3').innerHTML=pathname;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+</head>
+<body>
+    
+    <script>
+        // let d=new Date()
+        // document.write(d);
+
+        const getDate=()=>{
+            const d=new Date()
+            const t=d.getHours()
+            document.write(d)
+            document.write('<br>')
+            // console.log(t)
+            if(t<12){
+                document.write('Good Morning')
+            }
+            else{
+                if(t>12 && t<17){
+                    document.write('Good AfterNoon')
+                }
+                else{
+                    document.write('Good Evening')
+                }
+            }
+        }
+        getDate()
+    </script>
+</body>
+</html>

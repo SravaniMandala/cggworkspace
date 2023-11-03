@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h2>Learning functions in javascript</h2>
+    <script>
+        function sayHello(){
+            console.log('Hello ,')
+            console.log('Are you ok')
+            console.log('what are you doing')
+        }
+        function doSum(a,b){
+            let c=a+b
+            return c
+        }
+        sayHello()
+        let s=doSum(12,45)
+        console.log(s)
+
+        function toCelsius1(f){
+            let result=5/9 * (f-32)
+            return result
+        }
+        // we can use let
+        const toCelsius=fahrenheit=>{
+            let result=5/9*(fahrenheit-32)
+            return result
+        }
+        const toCelsius2=fahrenheit=>5/9*(fahrenheit-32)
+            
+        
+        let c=toCelsius(102)
+        console.log(c)
+    </script>
+</body>
+</html>

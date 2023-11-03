@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling</title>
+    <style>
+        .red{
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeStyle()"> Change Style</button>
+    <button onclick="getStyle()"> Get Style</button>
+    <h2 id="main">This is first heading</h2>
+    <h2 id="sub">This is sub heading</h2>
+    <h2 id="subsub">This is third heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore perspiciatis mollitia ipsam ratione dicta ex, iusto quia blanditiis, esse illum voluptate explicabo exercitationem ab numquam. Beatae quis sapiente explicabo velit.</p>
+    <script>
+        let mainob=document.getElementById('main')
+
+        mainob.style.color='orange'
+        mainob.style.fontSize='50px'
+        mainob.style.border='2px solid brown'
+        mainob.style.backgroundColor='yellow'
+        mainob.style.padding='20px'
+
+        const changeStyle=()=>{
+        mainob.style.color='orange'
+        mainob.style.fontSize='50px'
+        mainob.style.border='2px solid brown'
+        mainob.style.backgroundColor='yellow'
+        mainob.style.padding='20px' 
+        
+        document.body.style.background='black'
+        document.body.style.color='white'
+        } 
+        const getStyle=()=>{
+            console.log(mainob.style.color);
+            console.log(mainob.style.fontsize);
+            console.log(mainob.style.border);
+
+            let styles=window.getComputedStyle(mainob)
+            console.log(styles.getPropertyValue('color'));
+        }
+        
+    </script>
+</body>
+</html>

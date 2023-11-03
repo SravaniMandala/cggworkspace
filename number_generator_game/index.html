@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Game</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="section1">
+        <button class="btn btn-primary btn-sm mt-4 " onclick="generate_number_btn_click()">Generate Number</button>
+    </div>
+
+    <div id="section2" class="container ">
+        <div class="row">
+            <div class="col-12 text-centre">
+                <img src="question_mark.jpeg">
+
+                <p>
+                    Guess the number between 1 and 6 **
+                </p>
+                <div>
+                    <input id="field" type="text" placeholder="Enter here" class="form-control"></input>
+                </div>
+                <button class="btn btn-primary btn-sm mt-4 " onclick="check_number()">Check</button>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center " id="section3">
+        <img src="dice.gif">
+        <h2>Generating number....</h2>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

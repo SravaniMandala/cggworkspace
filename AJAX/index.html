@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <script>
+        function loadInfo(){
+            let request=new XMLHttpRequest()
+            request.open('GET','data.json')
+
+            request.onreadystatechange=function(){
+                if(this.readyState==4&&this.status==200){
+                    
+                    // document.getElementById('container').innerHTML=this.responseText
+
+                    let ob=JSON.parse(this.responseText)
+                    console.log(ob)
+                    document.getElementById('container').innerHTML=ob.heading + ob.content;
+                }
+            }
+            request.send()
+        }
+    </script>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <h2>We are learning Ajax</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sint et nemo hic possimus saepe aut assumenda! Modi dolorum animi at soluta, impedit quod? Porro incidunt modi id illo eos.</p>
+    <h1><a href="about.html">About page</a></h1>
+    <button onclick="loadInfo()">Load About</button>
+    <div id="container"></div>
+
+    <button id="jbtn">Jquery Load</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#jbtn').click(function(){
+                $.get("data.json",function(data){
+                    console.log('jquery:')
+                    console.log(data)
+                    document.getElementById('container').innerHTML=data.heading+data.content
+                })
+            })
+        })
+    </script>
+</body>
+</html>

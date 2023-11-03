@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+    <h2 id="banner">Centre for Good Governance</h2>
+    <h1 class="myClass">Hello World</h1>
+    <h1 class="myClass">Hello World</h1>
+    <h1 class="myClass">Hello World</h1>
+    <script>
+        console.log('inside body');
+
+        let ht=document.documentElement
+        console.log(ht);
+
+        let he=document.head
+        console.log(he);
+
+        let bo=document.body
+        console.log(bo);
+
+        let ti=document.title
+        console.log(ti);
+
+        let h2=document.getElementById('banner')
+        console.log(h2);
+        h2.innerHTML='changed text'
+        h2.style.color='white'
+        h2.style.backgroundColor='blue'
+
+
+        let e1=document.getElementsByClassName('myClass')
+        console.log(e1);
+        for(element of e1){
+            console.log(element);
+            element.style.color='white'
+            element.style.backgroundColor='pink'
+        }
+
+        //selecting elements by tag
+
+        //selecting elements with the help of CSS selectors
+
+        // let els=document.querySelector('.myclass')
+        // console.log(els)
+        let els=document.querySelectorAll('.myClass')
+        console.log(els);
+        for(let e of els){
+            console.log(e);
+            e.style.color='green'
+        }
+    </script>
+</body>
+</html>

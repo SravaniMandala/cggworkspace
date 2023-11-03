@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound interest</title>
+</head>
+<body>
+    <hr>
+    <h4>***************Compound Interest***************</h4>
+    <hr>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <script>
+        var p=1000
+        var n=1
+        var r=10
+        
+        var ci=(p*((1+(r/100))^n))-p;
+       
+
+        document.getElementById("1").innerHTML=`Principle               - ${p}`;
+        document.getElementById("2").innerHTML=`Rate of interest        - ${r}`;
+        document.getElementById("3").innerHTML=`Period                  - ${n} Yr`;
+        document.getElementById("4").innerHTML=`Compound Interest       - ${ci}`;
+
+    </script>
+</body>
+</html>

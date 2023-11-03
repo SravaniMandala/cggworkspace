@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+</head>
+<body>
+    <button onclick="turnon()">Turn on</button>
+    <button onclick="turnoff()">Turn off</button>
+    <button onclick="onoff()" id="btn">ON</button>
+    <img id="image" src="bulb-off.jpg">
+    <script>
+        const turnon=()=>{
+            let img=document.getElementById('image')
+            img.setAttribute('src',"bulb-on.jpg")
+            let buton=document.getElementById('btn')
+            buton.innerHTML='Off'
+        }
+        const turnoff=()=>{
+            let img=document.getElementById('image')
+            img.setAttribute('src',"bulb-off.jpg")
+            let buton=document.getElementById('btn')
+            buton.innerHTML='ON'
+        }
+        const onoff=()=>{
+            let img=document.getElementById('image')
+            let buton=document.getElementById('btn')
+            if (img.getAttribute('src')=='bulb-off.jpg'){
+                img.setAttribute('src',"bulb-on.jpg")
+                buton.innerHTML='Off'
+            }
+            else{
+                img.setAttribute('src',"bulb-off.jpg")
+                buton.innerHTML='ON'
+            }
+        }
+    </script>
+</body>
+</html>

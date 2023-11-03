@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion in Js</title>
+</head>
+<body>
+    <h2>Type Conversion</h2>
+    <script>
+        let a=12
+        console.log(typeof a);
+
+        let as=String(a)
+        console.log(as);
+        console.log(typeof as);
+
+        console.log(as.length);
+        console.log(a.length);
+
+        console.log(a.toString());
+        console.log(String(false));
+
+
+
+        let value='1234'
+        console.log(value+5);
+
+        let value1=Number(value)
+        console.log(value1+5);
+
+        let f1="1234.56"
+        let f2=Number(f1)
+        console.log(f2);
+        console.log(typeof f2);
+
+
+        let pint=parseInt(value)
+        console.log(pint);
+        console.log(typeof pint);
+
+        console.log(parseFloat(f1));
+
+        // undefined==NaN
+        // null=0
+        // true=1
+        // false=0
+
+        console.log(Number(false));
+        
+        //string true
+        //empty string false
+        //number true
+        //0 false
+
+        let ex="false"
+        console.log(typeof ex);
+
+        let exb=Boolean(ex)
+        console.log(exb);
+        console.log(typeof exb);
+
+
+    </script>
+</body>
+</html>

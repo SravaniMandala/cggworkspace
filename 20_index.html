@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event And Event Handling</title>
+</head>
+<body>
+    <!-- <button onclick="alert('This is a click event')">Click me</button> -->
+    <button onclick="my_func()">Click me</button>
+    <input type="text" onfocus="change_color()" id="field" onkeyup="update_text" >
+    <form onsubmit="form_submit(event)" action="text.html">
+        <button type="submit">Submit</button>
+    </form>
+    <button onclick="go_live_btn()">button</button>
+    <script>
+
+        const form_submit=e=>{
+            console.log(e);
+            e.preventDefault()
+        }
+        const my_func=()=>alert("This code is from block")
+
+        const change_color=()=>document.getElementById('field').style.backgroundColor='#e2e2e2'
+
+        const update_text=()=>{
+            let data=document.getElementById('field')
+
+        }
+
+       
+        go_live_btn_ob=document.querySelector("#go_live_btn")
+        go_live_btn_ob.addEventListener('click',()=>{
+            alert("you are live now")
+        })
+
+        go_live_btn_ob.addEventListener('click',()=>{
+            document.body.style.backgroundColor='black'
+            document.body.style.color='white'
+        })
+
+        
+    
+
+    </script>
+</body>
+</html>

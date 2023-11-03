@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array operations</title>
+</head>
+<body>
+    <h2>Array operations</h2>
+    <script>
+        let names=['abc','fgh','rty']
+        console.log(names);
+        console.log(names.length);
+
+        names.forEach(function(item,index){
+            console.log(index," => ",item);
+        })
+        names.forEach((item,index)=>{
+            console.log(`${index}=>${item}`)
+        })
+
+        let nums=[22,11,23,56]
+        let sum=0
+        nums.forEach(function(it,i){
+            sum=sum+it
+        })
+
+        //remove elements from beginning we use shift
+        //to add element in frontend we use unshift
+
+        //for copying an array we use slice
+
+        
+    </script>
+</body>
+</html>

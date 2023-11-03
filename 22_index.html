@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & obj</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(name,phone){
+                this.name=name
+                this.phone=phone
+                console.log("object created....")
+            }
+
+            showdetails(){
+                console.log(`Name: ${this.name}`);
+                console.log(`phone: ${this.phone}`);
+                console.log(`############`);
+            }
+
+            getName(){
+                return this.name.toUppercase()
+            }
+        }
+
+        let s1=new Student('abc',12345)
+        s1.showdetails()
+
+        console.log(s1.getName());
+
+        let s2=new Student('pqr',12876)
+        s1.showdetails()
+
+        console.log(s2.getName());
+    </script>
+</body>
+</html>

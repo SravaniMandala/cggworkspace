@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <div id="main">
+        <!-- before -->
+        <h1 id="title">Hello World!</h1>
+        <p id="hint">This is a simple paragraph</p>
+        <!-- div element -->
+    </div>
+    <div>
+        <button onclick="addnote()">Add note</button>
+        <script>
+            function addnote(){
+                console.log('adding note');
+
+                let divElemnet=document.createElement('div')
+                console.log(divElemnet);
+
+                let textElement=document.createTextNode('Wow this is magic')
+                let textElement1=document.createTextNode('Javascript is magic')
+
+                divElemnet.appendChild(textElement)
+                divElemnet.appendChild(textElement1)
+
+                console.log(divElemnet);
+
+                let mainElement=document.getElementById('main')
+                mainElement.appendChild(divElemnet)
+
+                let titleElement=document.getElementById('title')
+                mainElement.insertBefore(divElemnet,titleElement)
+
+                titleElement.innerHTML='hey there'
+
+                mainElement.removeChild(titleElement)
+
+                //replace child
+
+                let newElement=document.createElement('h2')
+                let newTextElement=document.createTextNode('This is h2 replacing paragraph')
+                newElement.appendChild(newTextElement)
+                console.log(newElement);
+
+                let oldElement=document.getElementById('hint')
+                mainElement.replaceChild(newElement,oldElement)
+            }
+        </script>
+    </div>
+</body>
+</html>

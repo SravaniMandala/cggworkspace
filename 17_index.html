@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Navigation</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">We are Learning Javascript</h1>
+        <p id="content">
+            <span>Javascript is one of the most
+                popular programming languag efor frontend as well  backend
+            </span>
+        </p>
+        <h2>This last child</h2>
+    </div>
+    <button onclick="btnClick()">Click Me for Magic</button>
+    <script>
+        function btnClick(){
+            let containerOb=document.getElementById('container')
+            console.log(containerOb);
+            console.log(containerOb.firstChild.nodeName)
+            console.log(containerOb.firstElementChild.nodeName);
+
+            let firstChild=containerOb.firstElementChild
+            console.log(firstChild);
+            firstChild.innerHTML='Hey Iam here'
+
+            // let nodes=containerOb.childNodes
+            // console.log(nodes)
+            // for(let n of nodes){
+            //     console.log(n.nodeName)
+            // }
+
+            let nodes=containerOb.children
+            console.log(nodes)
+            for(let n of nodes){
+                console.log(n.nodeName);
+            }
+
+            let parentNode=containerOb.parentNode
+            console.log(parentNode.nodeName);
+
+            let titleOb=document.getElementById('title')
+            // let nexts=titleOb.nextSibling
+            // console.log(nexts)
+
+            let nextS=titleOb.nextElementSibling
+            console.log(nextS.nodeName)
+            console.log(nextS.nextElementSibling.nodeName)
+        }
+    </script>
+</body>
+</html>

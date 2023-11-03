@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrays</title>
+</head>
+<body>
+    <h2>Javascript Arrays</h2>
+    <script>
+        let arr=[12,45,65,90,6]
+        console.log(arr);
+        console.log(typeof arr);
+
+        console.log(arr[4]);
+        console.log(arr[12]);
+
+        let names=new Array('abc','xyz','pqr')
+        console.log(names);
+        console.log(names[1]);
+
+        //array size is not fixed
+
+        names.push('ush')
+        console.log(names);
+        names.push('ghj')
+        console.log(names);
+
+        console.log("size of the array",names.length);
+
+        const myDetails=['abc',123,345.67,['asd','wer']]
+        console.log(myDetails);
+        console.log(myDetails[3]);
+    </script>
+</body>
+</html>

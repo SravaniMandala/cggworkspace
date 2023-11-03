@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+<body>
+    <h2>String Operations</h2>
+    <script>
+        let str1="javascript"
+        let str2="javascript"
+        console.log(str1==str2);
+        console.log(str1);
+        console.log(str2);
+        if(str1===str2){
+            console.log("both string are equal")
+        }
+
+        let str3=new String("javascript")
+        let str4=new String("javascript")
+        console.log(str3==str4);
+        console.log(str3);
+        console.log(str4);
+
+        let s1='A',s2='B'
+
+        let result=s1.localeCompare(s2)
+        //exact match 0
+        //s1<s2 -ve
+        //s1>s2 +ve
+
+        console.log(result);
+
+        let oldString="I like javascript"
+        let newString=oldString.replace("like","dont like")
+        console.log(oldString);
+        console.log(newString);
+
+        console.log(oldString.charAt(0));
+        console.log(oldString[2]);
+
+        console.log(newString.charAt(96));
+        console.log(newString[96]);
+
+    </script>
+</body>
+</html>

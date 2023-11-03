@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>PRODUCTS</h1>
+    <table border="4" >
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Qty</td>
+        </tr>
+        <tr>
+            <td>Barbie Doll</td>
+            <td>Beautiful</td>
+            <td>20</td>
+            <td> <input type="text" id="barbie" name="barbie"></td> 
+        </tr>
+        <tr>
+            <td>Caluclator</td>
+            <td>calculates with latest features</td>
+            <td>30</td>
+            <td> <input type="text" id="calculator" name="calculator"></td> 
+        </tr>
+        <tr>
+            <td>Mobile Phone</td>
+            <td>Camera,Java Games,GPRS</td>
+            <td>40</td>
+            <td> <input type="text" id="mobile" name="mobile"></td>
+        </tr>
+        <tr>
+            <td>LG DVD</td>
+            <td>5 disc changer</td>
+            <td>50</td>
+            <td> <input type="text" id="dvd" name="dvd"></td>
+        </tr>
+    </table>
+    <button onclick="order()" id="btn">ORDER</button>
+    <script>
+        
+        const order=()=>{
+        var text1=document.getElementById('barbie').value
+        var text2=document.getElementById('calculator').value
+        var text3=document.getElementById('mobile').value
+        var text4=document.getElementById('dvd').value
+
+        if(text1==' ' && text2==' ' && text3==' ' && text4==' '){
+            const invoiceWindow = window.open('', 'Invoice', 'width=400,height=400');
+
+            // Display the invoice content in the new window
+            invoiceWindow.document.write('<pre>' + invoice + '</pre>');
+        }
+        }
+    </script>
+    
+</body>
+</html>

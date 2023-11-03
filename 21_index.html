@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Getter and Setter,Constructor</title>
+</head>
+<body>
+    <script>
+        // const emp={
+        //     name:'abc',
+        //     company:'cgg',
+        //     city:'hyd',
+
+        //     get getName(){
+        //         return this.name.toUpperCase()
+        //     },
+
+        //     get getCompany(){
+        //         return this.college
+        //     },
+
+        //     get getCity(){
+        //         return city
+        //     },
+
+        //     set setName(name){
+        //         console.log('setting value to name');
+        //         if(name==''){
+        //             alert('not going to set')
+        //             return
+        //         }
+        //         this.name=name
+        //     },
+        //     set setCity(city){
+        //         console.log('setting value to city')
+        //         this.city=city
+        //     },
+        //     set setCompany(city){
+        //         console.log('setting value to company')
+        //         this.company=company
+        //     },
+
+        //     display:function(){
+        //         return `$(this.name)`
+        //     }
+        // }
+
+
+
+        // emp.setName='pqr'
+        // console.log(emp.display());
+
+        // console.log(emp.getName);
+
+        // emp.setName=''
+
+
+        //constructor
+        //
+        function person(id,phone,age){
+            this.personId=id,
+            this.personPhn=phone,
+            this.personAge=age,
+            this.display=function(){
+                return `${this.personId}:${this.personPhn}:${this.personAge}`
+            }
+        }
+
+        let p1=new person(12,1234,45)
+        console.log(p1.display());
+    </script>
+</body>
+</html>

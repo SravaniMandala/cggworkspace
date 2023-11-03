@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Objects</title>
+</head>
+<body>
+    <h1>Math objects operations</h1>
+    <script>
+        function area_of_circle(r){
+            console.log(Math.PI);
+
+            let area = Math.PI*r*r
+            return area
+        }
+        console.log(`Area of the circle with radius 5 is ${area_of_circle(5)}`)
+
+        let a=123
+
+        console.log(Math.abs(a));
+
+
+        let r=Math.random()
+        console.log(r);
+
+        console.log(r*100);
+
+        console.log(r*1000);
+
+        let three_digit_number=r*1000
+        console.log(three_digit_number);
+        console.log(Math.trunc(three_digit_number));
+
+        console.log(Math.sqrt(4));
+
+
+        console.log(Math.ceil(3.5));
+        console.log(Math.floor(3.5));
+        console.log(Math.ceil(3.2));
+        console.log(Math.ceil(-3.2));
+
+        console.log(Math.min(4,43,45,10,890));
+        console.log(Math.sin(30*(Math.PI/180)));
+    </script>
+</body>
+</html>
